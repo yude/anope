@@ -1,0 +1,15 @@
+#!/bin/bash
+basedir=$(dirname $0)
+confdir=/anope/conf
+env=$(compgen -v |sed 's/^/$/' | paste -s -d ':')
+
+mkdir -p $confdir
+
+for template in $(find $basedir/templates -type f); do
+  output=$confdir/$(basename $template)
+  echo "Writing $output"
+  envsubst $env < $template > $output
+done
+
+exec /anope/bin/services -debug -nofork --config=services.conf --confdir=$confdir
+
