@@ -70,7 +70,7 @@ RUN echo 'APT::Install-Recommends "0";' >> /etc/apt/apt.conf.d/01buildconfig && 
     sed -i -r 's/\$prefix"geoip_country6\.csv"//' /anope/bin/geoipupdate.sh && \
     rm -rf /anope/logs && \
     mkdir -p /anope/logs && \
-    cp /anope/conf/example.conf  /anope/conf/services.conf && \
+    rm -rf /anope/confg && \
     mkdir -p /anope/conf && \
     chown -R anope:anope -R /anope/ && \
     apt-get -y remove build-essential cmake && \
@@ -84,6 +84,8 @@ WORKDIR /anope
 ADD start /start
 ADD templates/ /anope/templates
 
+USER anope
+
 EXPOSE 8080
 
-ENTRYPOINT ["/anope/bin/services"]
+ENTRYPOINT ["/start"]
