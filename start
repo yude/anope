@@ -1,6 +1,6 @@
 #!/bin/bash
-basedir=$(dirname $0)
-confdir=/anope/conf
+basedir=/anope
+confdir=$basedir/conf
 env=$(compgen -v |sed 's/^/$/' | paste -s -d ':')
 
 mkdir -p $confdir
