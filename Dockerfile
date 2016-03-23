@@ -19,7 +19,7 @@ ENV ANOPE_UPLINK_PORT 7000
 ENV ANOPE_UPLINK_PASSWORD secret
 
 ENV ANOPE_SERVERINFO_NAME anope.localnet
-ENV ANOPE_SALT            taip1aiNaesh
+ENV ANOPE_SALT            salt
 
 # Mysql
 ENV MYSQL_USER irc
