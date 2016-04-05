@@ -76,7 +76,7 @@ RUN echo 'APT::Install-Recommends "0";' >> /etc/apt/apt.conf.d/01buildconfig && 
     chown -R anope:anope -R /anope/ && \
     apt-get -y remove build-essential cmake && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/src/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/src/* 
 
 VOLUME [ "/anope/log" ]
 

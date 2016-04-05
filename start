@@ -11,5 +11,7 @@ for template in $(find $basedir/templates -type f); do
   envsubst $env < $template > $output
 done
 
+/anope/bin/geoipupdate.sh 
+
 exec /anope/bin/services -debug -nofork --config=services.conf --confdir=$confdir
 
