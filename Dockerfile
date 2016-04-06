@@ -21,6 +21,8 @@ ENV ANOPE_UPLINK_PASSWORD secret
 ENV ANOPE_SERVERINFO_NAME anope.localnet
 ENV ANOPE_SALT            salt
 
+ENV ANOPE_URL http://localhost/
+
 # Mysql
 ENV MYSQL_USER irc
 ENV MYSQL_PASSWORD password
