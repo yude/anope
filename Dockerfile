@@ -7,7 +7,7 @@ MAINTAINER  Erik Osterman "e@osterman.com"
 # https://github.com/dockerimages/docker-unrealircd/blob/master/deploy-unrealirc.sh
 
 # Anope
-ENV ANOPE_VERSION 2.0.2
+ENV ANOPE_VERSION 2.0.3
 ENV ANOPE_GEOIP_DATABASE country
 ENV ANOPE_SMTP_HOST 127.0.0.1
 
